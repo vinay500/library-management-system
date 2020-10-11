@@ -1,0 +1,53 @@
+{% extends 'home.html' %}
+{% load static %}
+
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Books</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/add_books.css' %}">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body class="body">
+	  <div class="head">
+	 		<span class="head_text">Add Book</span>
+	  </div>
+	  <div class="form">
+		<form method="POST" action="addbooks" >
+			{% csrf_token %}
+			<label class="label">
+				<span class="label_text"> Book Name</span>
+			</label>
+			<div class="input">
+				<input class="input_inner" type="" name="book_name" placeholder=""><br>
+			</div>
+			<hr>
+			<label class="label">
+				<span class="label_text">Book Author</span>
+			</label>
+			<div class="input">
+				<input class="input_inner" type="" name="book_author" placeholder=""><br>
+			</div>
+			<hr>
+			<label class="label">
+				<span class="label_text"> Book ID </span>
+			</label>
+			<div class="input">
+				<input  class="input_inner" type="" name="book_id" placeholder=""><br>
+	        </div>
+	        <hr>
+	        <div class="submit_div">
+				<input type="submit" name="submit" class="submit_btn" value="Submit">
+			</div>
+	</form>
+	</div>
+
+
+</body>
+</html>
+ {%  endblock %}

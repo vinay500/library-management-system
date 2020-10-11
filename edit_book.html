@@ -1,0 +1,70 @@
+{% extends 'home.html' %}
+{% load static %}
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--	<title>Edit Book</title>-->
+<!--	<link rel="stylesheet" type="text/css" href="css/edit_book.css">-->
+<!--	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">-->
+<!--  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+<!--  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>-->
+<!--  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>-->
+<!--</head>-->
+<!--<body>-->
+<!--	<span class="text">Edit Book</span>-->
+<!--	<form action="" method="post" class="form">-->
+<!--		<div class="form_inner">-->
+<!--			<div class="form_element">-->
+<!--				<label class="label_id">Book ID</label>-->
+<!--				<input class="input " type="number" name="book_id"><br>-->
+<!--			</div>-->
+<!--			<div class="form_element">-->
+<!--				<label>Book Name</label>-->
+<!--				<input class="input " type="text" name="book_name"><br>-->
+<!--			</div>-->
+<!--			<div class="form_element">-->
+<!--				<label>Book Author</label>-->
+<!--				<input class="input" type="text" name="book_author"><br>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</form>-->
+<!--</body>-->
+<!--</html>-->
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Book</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/edit_book.css' %} ">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<form action="" method="post" class="form">
+		<div class="form_inner">
+			<div class="form_element">
+				<label class="label_id">Book ID</label>
+				<input class="input " type="number" name="book_id" placeholder={{book.book_id}}><br>
+			</div>
+			<div class="form_element">
+				<label>Book Name</label>
+				<input class="input " type="text" name="book_name"><br>
+			</div>
+			<div class="form_element">
+				<label>Book Author</label>
+				<input class="input" type="text" name="book_author"><br>
+			</div>
+			<div class="edit_btn_div">
+				<a href="">
+					<input type="submit" name="edit_btn" value="Edit" class="edit_btn">
+				</a>
+
+			</div>
+		</div>
+	</form>
+</body>
+</html>
+{% endblock %}

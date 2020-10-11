@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Library Management System</title>
+	     <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color: skyblue">
+	<div class="header-1">
+		<img src="{% static 'images/JB_logo.jpg ' %}">
+	</div>
+
+		<div class="header-2">
+			<div class="row">
+			<!-- <div class="col-4"> -->
+				<div class="col-6">
+					<h1 class=" justify-content-start">Jbit Library Management System</h1>
+				</div>
+
+				<!-- <div class="col-8"> -->
+				<div class="col-6">
+					<div class="nav-menu container">
+						<ul class="nav nav-pills justify-content-end">
+
+							<li class="nav-item nav-element">
+								<a href="" class="nav-link active">
+									<span class="nav-element">Home</span>
+								</a>
+							</li>
+							<li class="nav-item nav-element">
+								<a href="addbooks" class="nav-link text-secondary">Add Books</a>
+							</li>
+							<li class="nav-item nav-element">
+								<a href="viewbooks" class="nav-link text-secondary">View Books</a>
+							</li>
+<!--							<li class="nav-item nav-element">-->
+<!--								<a href="deletebook" class="nav-link text-secondary">Delete Books</a>-->
+<!--							</li>-->
+						</ul>
+					</div>
+				</div>
+			</div>
+        </div>
+
+	{% block content %}
+
+
+
+	{% endblock %}
+</body>
+</html>
